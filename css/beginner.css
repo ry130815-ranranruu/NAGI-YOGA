@@ -1,0 +1,377 @@
+@charset "UTF-8";
+
+/* 初めての方へ専用。共通の色・フォント・ヘッダー・フッターはstyle.cssを参照。 */
+.page-beginner {
+  --faq-easing: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.beginner-hero {
+  display: grid;
+  place-items: center;
+  min-height: 320px;
+  padding: 56px var(--side-padding);
+  background: var(--background);
+}
+
+.beginner-hero h1 {
+  font-family: var(--mincho);
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+}
+.beginner-faq,
+.beginner-belongings {
+  padding-block: var(--section-padding);
+}
+
+.beginner-faq {
+  background: var(--background-secondary);
+}
+
+.beginner-faq-list {
+  display: grid;
+  gap: 16px;
+  padding-top: 16px;
+}
+
+.beginner-faq-item {
+  padding: 40px;
+  border-radius: var(--card-radius);
+  background: var(--card);
+  box-shadow: 0 1px 2px rgb(0 0 0 / 5%);
+  /* 別の回答が閉じる際、ブラウザー独自のスクロール補正と競合させない。 */
+  overflow-anchor: none;
+}
+
+.beginner-faq-question {
+  display: grid;
+  grid-template-columns: 32px minmax(0, 1fr) 20px;
+  align-items: start;
+  gap: 16px;
+  width: 100%;
+  padding: 24px;
+  border-radius: 8px;
+  color: var(--text-default);
+  font-family: var(--mincho);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: left;
+  overflow-wrap: anywhere;
+  transition: color 180ms ease;
+}
+
+.beginner-faq-list:not(.beginner-faq-ready) .beginner-faq-arrow {
+  visibility: hidden;
+}
+
+@media (hover: hover) {
+  button.beginner-faq-question:hover {
+    color: var(--primary);
+  }
+}
+
+button.beginner-faq-question:focus-visible {
+  color: var(--primary);
+}
+
+.beginner-faq-mark {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  margin-top: 2px;
+  border-radius: 50%;
+  color: #2c676c;
+  background: #b2edf2;
+  font-family: var(--mincho);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.beginner-faq-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 24px;
+  margin-top: 6px;
+  transition: transform 0.3s var(--faq-easing);
+}
+
+/* 外枠の寸法を保ち、右・下のborderだけを45度回して山形にする（PCは14px、SPは8px四方）。 */
+.beginner-faq-arrow::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  border-right: 2px solid var(--primary);
+  border-bottom: 2px solid var(--primary);
+  transform: rotate(45deg);
+}
+
+.beginner-faq-question[aria-expanded="true"] .beginner-faq-arrow {
+  transform: rotate(180deg);
+}
+
+/* 中の要素をmin-height:0とoverflow:hiddenにして、0frまで閉じられるようにする。 */
+.beginner-faq-answer {
+  display: grid;
+  grid-template-rows: 1fr;
+  transition: grid-template-rows 0.4s var(--faq-easing);
+}
+
+.beginner-faq-answer-inner {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.beginner-faq-answer p {
+  max-width: 856px;
+  margin: 16px auto 0;
+  color: var(--text-default);
+  font-size: 16px;
+  line-height: 2;
+  transition:
+    opacity 0.3s var(--faq-easing),
+    transform 0.3s var(--faq-easing);
+}
+
+/* 見た目はボタンのaria-expandedから決め、JSで読み上げ・操作可否も同期する。 */
+.beginner-faq-ready h3:has(> [aria-expanded="false"]) + .beginner-faq-answer {
+  grid-template-rows: 0fr;
+}
+
+.beginner-faq-ready h3:has(> [aria-expanded="false"]) + .beginner-faq-answer p {
+  opacity: 0;
+  transform: translateY(6px);
+}
+
+.beginner-faq-ready h3:has(> [aria-expanded="true"]) + .beginner-faq-answer p {
+  transition-delay: 0.1s;
+}
+
+/* 初期化で全問を閉じる際は動かさず、ユーザー操作からtransitionを有効にする。 */
+.beginner-faq-list:not(.beginner-faq-animated) .beginner-faq-answer,
+.beginner-faq-list:not(.beginner-faq-animated) .beginner-faq-answer p,
+.beginner-faq-list:not(.beginner-faq-animated) .beginner-faq-arrow {
+  transition: none;
+}
+
+.beginner-belongings {
+  background: var(--background);
+}
+
+.beginner-belongings-content {
+  padding-block: 7px;
+  font-size: 24px;
+  line-height: 2;
+}
+
+.beginner-belongings-list {
+  padding-left: 1em;
+}
+
+.beginner-belongings-list li {
+  list-style: disc;
+}
+.beginner-belongings-list li::marker {
+  color: var(--button);
+}
+.beginner-belongings-note {
+  margin-top: 16px;
+}
+
+.beginner-next {
+  position: relative;
+  padding-block: var(--section-padding) var(--section-padding-end);
+  background: var(--background-secondary);
+  text-align: center;
+}
+
+.beginner-next h2 {
+  color: var(--primary);
+  font-family: var(--mincho);
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.beginner-next h2 + p {
+  margin-top: 16px;
+  color: var(--text-secondary);
+}
+
+.beginner-next-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.beginner-next-button {
+  gap: 8px;
+  max-width: 100%;
+  white-space: normal;
+}
+
+.beginner-next-button picture {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.beginner-next-button--secondary {
+  padding: 14px 32px;
+  color: var(--primary);
+  background: var(--card);
+}
+
+.beginner-next-button--secondary:hover img,
+.beginner-next-button--secondary:focus-visible img {
+  filter: brightness(0) invert(1);
+}
+
+@media (max-width: 1199px) {
+  .beginner-hero {
+    min-height: 240px;
+  }
+  .beginner-faq-item {
+    padding: 24px;
+  }
+  .beginner-faq-question {
+    padding: 16px;
+  }
+  .beginner-faq-answer p {
+    margin-inline: 48px 16px;
+  }
+  .beginner-belongings-content {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .beginner-hero {
+    min-height: 144px;
+    gap: 16px;
+    background: var(--card);
+  }
+  .beginner-hero h1 {
+    font-size: 24px;
+  }
+  .beginner-hero::after {
+    content: "";
+    width: 32px;
+    height: 2px;
+    background: var(--button);
+    opacity: 0.6;
+  }
+  .beginner-faq {
+    background: var(--background);
+  }
+  .beginner-faq-list {
+    padding-top: 0;
+  }
+  .beginner-faq-item {
+    padding: 21px;
+    border: 1px solid rgb(240 253 250 / 60%);
+    box-shadow: 0 4px 10px color-mix(in srgb, var(--shadow) 6%, transparent);
+  }
+  .beginner-faq-question {
+    grid-template-columns: 24px minmax(0, 1fr) 16px;
+    gap: 12px;
+    min-height: 44px;
+    padding: 0;
+    font-family: var(--gothic);
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .beginner-faq-mark {
+    width: 24px;
+    height: 24px;
+    color: var(--button);
+    background: #d6f5f8;
+    font-family: var(--gothic);
+    font-size: 12px;
+  }
+  .beginner-faq-arrow {
+    width: 16px;
+    margin-top: 0;
+  }
+  .beginner-faq-arrow::before {
+    width: 8px;
+    height: 8px;
+  }
+  .beginner-faq-answer p {
+    max-width: none;
+    margin: 16px 0 0;
+    padding: 13px 0 0 36px;
+    border-top: 1px solid #f3f4f6;
+    line-height: 1.75;
+  }
+  .beginner-belongings {
+    background: var(--card);
+  }
+  .beginner-belongings .beginner-container,
+  .beginner-next .beginner-container {
+    --side-padding: 24px;
+  }
+  .beginner-belongings-content {
+    padding: 16px 0 0;
+    font-size: 16px;
+    line-height: 1.75;
+  }
+  .beginner-belongings-list li + li {
+    margin-top: 8px;
+  }
+  .beginner-belongings-list + p {
+    margin-top: 12px;
+    color: var(--text-secondary);
+  }
+  .beginner-belongings-note {
+    margin-top: 32px;
+    color: var(--text-secondary);
+  }
+  .beginner-belongings-note p + p {
+    margin-top: 12px;
+  }
+  .beginner-next {
+    background: var(--background);
+  }
+  .beginner-next h2 {
+    font-size: 20px;
+  }
+  .beginner-next h2 + p {
+    margin-top: 12px;
+  }
+  .beginner-next-buttons {
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 32px;
+  }
+  .beginner-next-button {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .beginner-next-button img {
+    width: auto;
+    height: auto;
+  }
+  .beginner-next-button--secondary {
+    border: 1px solid var(--button);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .beginner-faq-question,
+  .beginner-faq-answer,
+  .beginner-faq-answer p,
+  .beginner-faq-arrow {
+    transition: none;
+  }
+}

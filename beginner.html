@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" type="image/png" href="images/favicon.png" sizes="512x512">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>初めての方へ｜NAGI YOGA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&family=Zen+Kaku+Gothic+New:wght@400;500&family=Zen+Old+Mincho:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/beginner.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/beginner.js" defer></script>
+</head>
+
+<body class="page-beginner">
+  <header class="site-header">
+    <a class="header-logo" href="index.html" aria-label="NAGI YOGA トップページ">
+      <img src="images/logo.png" alt="NAGI YOGA" width="500" height="168">
+    </a>
+    <button class="toggle-btn" type="button" aria-label="メニュー" aria-expanded="false" aria-controls="header-menu" hidden>
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="header-nav" id="header-menu" aria-label="メインナビゲーション">
+      <ul class="global-menu">
+        <li><a href="index.html">トップページ</a></li>
+        <li><a href="beginner.html" aria-current="page">初めての方へ</a></li>
+        <li><a href="lessons.html#our-lesson">レッスンの種類</a></li>
+        <li><a href="index.html#instructor">インストラクター</a></li>
+        <li><a href="lessons.html#triallesson">体験レッスン</a></li>
+      </ul>
+      <a class="reservation-button header-reservation" href="lessons.html#contact">体験レッスン予約</a>
+    </nav>
+    <div class="menu-overlay" aria-hidden="true" hidden></div>
+  </header>
+
+  <main>
+    <div class="beginner-hero">
+      <h1>初めての方へ</h1>
+    </div>
+
+    <section class="beginner-faq" aria-labelledby="beginner-faq-title">
+      <div class="beginner-container">
+        <h2 class="section-title" id="beginner-faq-title">
+          <span class="en">Q&amp;A</span>
+          <span class="ja">よくあるご質問</span>
+        </h2>
+        <!-- JS無効時もすべての回答を読める。JSの準備後に開閉ボタンを生成する。 -->
+        <div class="beginner-faq-list">
+          <div class="beginner-faq-item">
+            <h3 class="beginner-faq-question" id="beginner-question-1">
+              <span class="beginner-faq-mark" aria-hidden="true">Q</span>
+              <span>身体がとても硬いけど大丈夫ですか？</span>
+              <span class="beginner-faq-arrow" aria-hidden="true"></span>
+            </h3>
+            <div class="beginner-faq-answer" id="beginner-answer-1">
+              <div class="beginner-faq-answer-inner">
+                <p>
+                  もちろん大丈夫です。自分自身の心地いいと感じるところまで、身体を伸ばしていきましょう。むしろ身体が硬い方ほど、ゆっくり伸ばす心地よさと開放感を実感していただけます。
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="beginner-faq-item">
+            <h3 class="beginner-faq-question" id="beginner-question-2">
+              <span class="beginner-faq-mark" aria-hidden="true">Q</span>
+              <span>運動が苦手で普段運動をしていないので、レッスンについていけるか心配です。</span>
+              <span class="beginner-faq-arrow" aria-hidden="true"></span>
+            </h3>
+            <div class="beginner-faq-answer" id="beginner-answer-2">
+              <div class="beginner-faq-answer-inner">
+                <p>激しい筋トレや息があがるような運動ではなく、深い呼吸に合わせて無理なく動かすプログラムです。運動が苦手な方でも安心して参加していただけます。</p>
+              </div>
+            </div>
+          </div>
+          <div class="beginner-faq-item">
+            <h3 class="beginner-faq-question" id="beginner-question-3">
+              <span class="beginner-faq-mark" aria-hidden="true">Q</span>
+              <span>普段着で行きたいのですが、更衣室はありますか？</span>
+              <span class="beginner-faq-arrow" aria-hidden="true"></span>
+            </h3>
+            <div class="beginner-faq-answer" id="beginner-answer-3">
+              <div class="beginner-faq-answer-inner">
+                <p>更衣室はありますので、普段着でお越しいただいても大丈夫です。（初めていらっしゃる方は、レッスン開始の10分前までにお越しください。）</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="beginner-belongings" aria-labelledby="beginner-belongings-title">
+      <div class="beginner-container">
+        <h2 class="section-title" id="beginner-belongings-title">
+          <span class="en">Required Items</span>
+          <span class="ja">持ち物・服装について</span>
+        </h2>
+        <div class="beginner-belongings-content">
+          <ul class="beginner-belongings-list" role="list">
+            <li>半袖〜長袖のTシャツ</li>
+            <li>動きやすい長ズボン</li>
+            <li>飲み物</li>
+          </ul>
+          <p>（ヨガマットはご用意しているので不要です）</p>
+          <div class="beginner-belongings-note">
+            <p>エアリアルヨガを体験される方は、布で肌が擦れる事を防ぐため、脇、お腹、肘、膝が隠れるような服装が望ましいです。</p>
+            <p>脇の下にハンモックを挟むポーズを行うので、袖のあるウェアの方が望ましいです。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="beginner-next" aria-labelledby="beginner-next-title">
+      <div class="beginner-container">
+        <h2 id="beginner-next-title">まずはプログラムをチェック</h2>
+        <p>運動量や目的に合わせて選べる2種類のプログラムをご用意しています。</p>
+        <div class="beginner-next-buttons">
+          <a class="reservation-button beginner-next-button" href="lessons.html#our-lesson">
+            <span>レッスンの種類を見る</span>
+            <picture>
+              <source media="(max-width: 767px)" srcset="images/beginner-arrow-sp-white.svg">
+              <img src="images/reservation-arrow.svg" width="13.3333" height="13.3333" alt="">
+            </picture>
+          </a>
+          <a class="reservation-button beginner-next-button beginner-next-button--secondary"
+            href="lessons.html#triallesson">
+            <span>体験レッスンの流れを見る</span>
+            <picture>
+              <source media="(max-width: 767px)" srcset="images/beginner-arrow-sp.svg">
+              <img src="images/beginner-arrow.svg" width="13.3333" height="13.3333" alt="">
+            </picture>
+          </a>
+        </div>
+      </div>
+      <div class="footer-wave" aria-hidden="true">
+        <img src="images/footer-wave.svg" class="footer-wave-shape" width="1440" height="152" alt="">
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-information">
+        <a href="index.html" aria-label="NAGI YOGA トップページ" class="footer-logo">
+          <img src="images/logo.png" width="200" height="67" alt="NAGI YOGA">
+        </a>
+        <p class="footer-description">
+          身体をほどいて、心を軽くする。<br>愛知県犬山市にあるマインドフルネス・ヨガスタジオ。
+        </p>
+        <p>
+          場所：愛知県犬山市（架空の所在地）<br>
+          アクセス：名鉄犬山口駅から徒歩5分／専用駐車場4台
+        </p>
+      </div>
+      <ul class="footer-nav">
+        <li><a href="index.html">TOP</a></li>
+        <li><a href="beginner.html" aria-current="page">初めての方へ</a></li>
+        <li><a href="lessons.html#our-lesson">レッスンの種類</a></li>
+        <li><a href="index.html#instructor">インストラクター</a></li>
+        <li><a href="lessons.html#triallesson">体験レッスン</a></li>
+      </ul>
+      <a class="reservation-button footer-reservation" href="lessons.html#contact">体験レッスン予約</a>
+    </div>
+    <p class="copyright">
+      <small>© NAGI YOGA All Rights Reserved.</small>
+    </p>
+  </footer>
+</body>
+
+</html>

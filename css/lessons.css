@@ -1,0 +1,595 @@
+@charset "UTF-8";
+
+/* PC 184:753 / SP 209:690。共通の色・フォント・ナビはstyle.cssを使用。 */
+.page-lessons main {
+  overflow-wrap: anywhere;
+}
+.lesson-hero {
+  display: grid;
+  place-items: center;
+  min-height: 320px;
+  padding: 56px var(--side-padding);
+  background: var(--background);
+}
+.lesson-hero h1 {
+  font-family: var(--mincho);
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+}
+.lesson-features {
+  padding-block: var(--section-padding);
+  background: var(--background-secondary);
+}
+.lesson-program-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 516px));
+  justify-content: center;
+  gap: 64px;
+}
+.lesson-program-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--border) 15%, transparent);
+  border-radius: var(--card-radius);
+  background: var(--card);
+  box-shadow: 0 10px 30px -10px color-mix(in srgb, var(--shadow) 8%, transparent);
+}
+.lesson-photo {
+  display: block;
+  overflow: hidden;
+}
+.lesson-photo img {
+  width: 100%;
+  height: auto;
+}
+
+.lesson-program-card-content {
+  display: grid;
+  gap: 16px;
+  padding: 16px 40px 40px;
+}
+.lesson-program-card-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 4px 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f5f5f5;
+}
+.lesson-program-card-heading h3 {
+  color: var(--primary);
+  font-family: var(--mincho);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.5;
+}
+.lesson-duration {
+  color: var(--primary);
+  white-space: nowrap;
+}
+.lesson-recommend {
+  padding: 24px 20px 20px;
+  border-radius: 12px;
+  background: #f5f9f9;
+}
+.lesson-recommend h4 {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 12px;
+  color: var(--button);
+  font-size: 16px;
+  font-weight: 400;
+}
+.lesson-recommend picture {
+  display: flex;
+  flex-shrink: 0;
+}
+.lesson-recommend li {
+  position: relative;
+  padding-left: 14px;
+  margin-top: 8px;
+}
+.lesson-recommend li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #5b9e87;
+}
+.lesson-schedule {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  padding-top: 16px;
+  border-top: 1px solid #f5f5f5;
+}
+.lesson-schedule strong {
+  padding: 4px 12px;
+  border-radius: 6px;
+  color: var(--primary);
+  background: var(--background);
+  font-weight: 500;
+}
+.lesson-trial,
+.lesson-flow {
+  padding-block: var(--section-padding);
+}
+.lesson-trial,
+.lesson-reservation {
+  background: var(--background);
+}
+.lesson-trial-card {
+  width: min(800px, 100%);
+  margin-inline: auto;
+  padding: 40px;
+  border: 1px solid color-mix(in srgb, var(--border) 15%, transparent);
+  border-radius: var(--card-radius);
+  background: var(--card);
+}
+.lesson-trial-list {
+  display: grid;
+  gap: 24px;
+  padding: 28px 20px;
+  border-bottom: 1px solid #f5f5f5;
+}
+.lesson-trial-note {
+  margin-top: 24px;
+  padding: 8px 20px;
+  border: 1px solid #b8e4e8;
+  border-radius: 999px;
+  color: var(--text-secondary);
+  background: var(--background);
+  text-align: center;
+}
+.lesson-flow {
+  background: var(--background-secondary);
+}
+.lesson-steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 32px;
+}
+.lesson-step {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+  padding: 40px 24px;
+  border: 1px solid color-mix(in srgb, var(--border) 15%, transparent);
+  border-radius: 12px;
+  background: var(--card);
+}
+.lesson-step-number {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto 16px;
+  border: 1px solid color-mix(in srgb, var(--border) 20%, transparent);
+  border-radius: 50%;
+  color: var(--button);
+  background: var(--background);
+  font-family: var(--mincho);
+}
+.lesson-step h3 {
+  min-height: 72px;
+  color: var(--primary);
+  font-family: var(--mincho);
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.6;
+  text-align: center;
+}
+.lesson-step h3 span {
+  display: block;
+  color: var(--button);
+}
+.lesson-step-description {
+  color: var(--text-secondary);
+}
+.lesson-step-comment {
+  margin-top: auto;
+  padding-top: 16px;
+  color: var(--button);
+  text-align: center;
+}
+.lesson-cancel {
+  width: min(800px, 100%);
+  margin: 40px auto 0;
+  color: var(--text-secondary);
+}
+.lesson-cancel h3 {
+  color: var(--primary);
+  font-size: 18px;
+  font-weight: 500;
+}
+.lesson-reservation {
+  position: relative;
+  padding-block: var(--section-padding) var(--section-padding-end);
+}
+.lesson-form-container {
+  width: min(974px, calc(100% - var(--side-padding) * 2));
+  margin-inline: auto;
+}
+.lesson-form-intro {
+  margin-bottom: 24px;
+  text-align: center;
+}
+.lesson-demo-note {
+  margin-bottom: 32px;
+  padding: 16px 20px;
+  border-left: 3px solid var(--button);
+  color: var(--text-secondary);
+  background: var(--card);
+}
+.lesson-form {
+  --field-border: #d1d5db;
+  --field-border-width: 1px;
+  --field-padding: 8px 12px;
+  padding: 40px;
+  border: 1px solid color-mix(in srgb, var(--border) 15%, transparent);
+  border-radius: var(--card-radius);
+  background: var(--card);
+}
+.lesson-fields {
+  display: grid;
+  gap: 24px;
+}
+.lesson-field {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: start;
+  gap: 16px;
+  min-width: 0;
+}
+.lesson-field-label {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  padding-top: 6px;
+}
+.lesson-badge {
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: var(--text-button);
+  background: #d9534f;
+  font-size: 12px;
+  line-height: 18px;
+  /* white-space: nowrap; */
+}
+.lesson-badge--optional {
+  background: #9ca3af;
+}
+.lesson-control {
+  min-width: 0;
+}
+.lesson-form input:not([type="radio"], [type="checkbox"]),
+.lesson-form textarea {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  padding: var(--field-padding);
+  border: var(--field-border-width) solid var(--field-border);
+  border-radius: 6px;
+  background: #fafcfc;
+  color: var(--text-default);
+  font: inherit;
+  line-height: 1.5;
+}
+.lesson-form textarea {
+  min-height: 104px;
+  resize: vertical;
+}
+.lesson-form input::placeholder,
+.lesson-form textarea::placeholder {
+  color: #6b7280;
+  opacity: 1;
+}
+.lesson-choices {
+  display: grid;
+  gap: 10px;
+}
+.lesson-choice {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #fafcfc;
+  cursor: pointer;
+}
+.lesson-choice span {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 6px;
+}
+.lesson-choice small {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+.lesson-form input[type="radio"],
+.lesson-form input[type="checkbox"] {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  accent-color: var(--button);
+  cursor: pointer;
+}
+.lesson-date-hint {
+  margin-top: 4px;
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.7;
+}
+.lesson-error {
+  color: #a32626;
+  font-size: 14px;
+  line-height: 1.7;
+}
+.lesson-error:not(:empty) {
+  margin-top: 6px;
+}
+.lesson-form [aria-invalid="true"] {
+  --field-border: #a32626;
+  --field-border-width: 2px;
+  /* 枠線が各辺1px増える分、内側余白を減らして寸法を保つ */
+  --field-padding: 7px 11px;
+}
+.lesson-agreement {
+  margin-top: 40px;
+  text-align: center;
+}
+.lesson-agreement-line {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 8px;
+  text-align: left;
+}
+.lesson-agreement-line input {
+  position: relative;
+  top: 3px;
+}
+.lesson-policy-link {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.lesson-submit {
+  display: block;
+  width: min(320px, 100%);
+  margin: 32px auto 0;
+  padding: 14px 20px;
+  border-radius: 8px;
+  color: var(--text-button);
+  background: var(--button);
+  font: inherit;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgb(0 0 0 / 10%);
+}
+.lesson-submit:hover {
+  background: var(--button-hover);
+}
+.lesson-submit:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+.page-lessons input:focus-visible,
+.page-lessons textarea:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+}
+.lesson-wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+.lesson-dialog {
+  /* ダイアログは画面幅にかかわらず左右16pxを確保する。 */
+  --side-padding: 16px;
+  width: min(720px, calc(100% - var(--side-padding) * 2));
+  max-height: calc(100dvh - 48px);
+  margin: auto;
+  padding: 40px;
+  border: 1px solid #b8e4e8;
+  border-radius: var(--card-radius);
+  color: var(--text-default);
+  background: var(--card);
+  overflow-y: auto;
+  overflow-wrap: anywhere;
+  font: inherit;
+}
+.lesson-dialog::backdrop {
+  background: rgb(17 30 31 / 50%);
+}
+.lesson-dialog h2 {
+  margin-bottom: 24px;
+  color: var(--primary);
+  font-family: var(--mincho);
+  font-size: 24px;
+  line-height: 1.5;
+}
+.lesson-dialog h3 {
+  margin-block: 24px 8px;
+  color: var(--primary);
+  font-size: 18px;
+}
+.lesson-dialog p + p {
+  margin-top: 16px;
+}
+html:has(.lesson-dialog[open]) {
+  overflow: hidden;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .lesson-program-cards {
+    gap: 32px;
+  }
+  .lesson-program-card-content {
+    padding-inline: 24px;
+  }
+  .lesson-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 767px) {
+  /* 本文だけ左右16pxにする。ヘッダー・フッターは共通設定を使う。 */
+  .page-lessons main {
+    --side-padding: 16px;
+  }
+  .lesson-hero {
+    min-height: 130px;
+    gap: 16px;
+    padding: 32px var(--side-padding);
+    background: var(--card);
+  }
+  .lesson-hero h1 {
+    font-size: clamp(20px, 5.8vw, 24px);
+  }
+  .lesson-hero::after {
+    content: "";
+    width: 32px;
+    height: 2px;
+    background: var(--button);
+    opacity: 0.6;
+  }
+  .lesson-features {
+    background: var(--background);
+  }
+  .lesson-program-cards {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+  }
+
+  .lesson-program-card-content {
+    gap: 14px;
+    padding: 20px;
+  }
+  .lesson-program-card-heading h3 {
+    font-size: 20px;
+  }
+  .lesson-duration {
+    font-size: 14px;
+  }
+  .lesson-recommend {
+    padding: 16px;
+    border: 1px solid #e2eee9;
+    background: #f6faf9;
+  }
+  .lesson-recommend h4 {
+    font-size: 14px;
+  }
+  .lesson-recommend picture img {
+    width: auto;
+    height: auto;
+  }
+  .lesson-schedule {
+    border-top-style: dashed;
+    font-size: 14px;
+  }
+  .lesson-schedule strong {
+    border-radius: 999px;
+  }
+  .lesson-trial {
+    background: linear-gradient(var(--background), var(--card));
+  }
+  .lesson-trial-card {
+    padding: 24px 20px;
+  }
+  .lesson-trial-list {
+    gap: 20px;
+    padding: 0 0 24px;
+  }
+  .lesson-trial-note {
+    border-radius: 12px;
+    font-size: 14px;
+    padding: 12px;
+  }
+  .lesson-flow {
+    background: var(--background);
+  }
+  .lesson-steps {
+    grid-template-columns: minmax(0, 1fr);
+    grid-auto-rows: 1fr;
+    gap: 16px;
+  }
+  .lesson-step {
+    align-items: center;
+    gap: 12px;
+    padding: 24px 20px;
+    text-align: center;
+  }
+  .lesson-step-number {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 0;
+  }
+  .lesson-step h3 {
+    min-height: 0;
+    font-size: 20px;
+  }
+  .lesson-step h3 span {
+    display: inline;
+    margin-right: 8px;
+  }
+  .lesson-step-comment {
+    padding-top: 0;
+    font-size: 14px;
+  }
+  .lesson-cancel {
+    margin-top: 32px;
+  }
+  .lesson-form-intro {
+    text-align: left;
+  }
+  .lesson-demo-note {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+  .lesson-form {
+    padding: 24px 20px;
+  }
+  .lesson-field {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 6px;
+  }
+  .lesson-field-label {
+    padding-top: 0;
+  }
+  .lesson-choice {
+    align-items: flex-start;
+  }
+  .lesson-choice input {
+    margin-top: 5px;
+  }
+  .lesson-choice small {
+    font-size: 13px;
+  }
+  .lesson-agreement {
+    margin-top: 24px;
+  }
+  .lesson-agreement-line {
+    font-size: 14px;
+  }
+  .lesson-submit {
+    padding-inline: 12px;
+    border-radius: 999px;
+  }
+  .lesson-dialog {
+    padding: 24px;
+  }
+  .lesson-dialog h2 {
+    font-size: 22px;
+  }
+}

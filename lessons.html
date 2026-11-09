@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
+	<link rel="icon" type="image/png" href="images/favicon.png" sizes="512x512">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>レッスンの種類・予約｜NAGI YOGA</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&family=Zen+Kaku+Gothic+New:wght@400;500&family=Zen+Old+Mincho:wght@400;500;600&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/lessons.css">
+	<script src="js/main.js" defer></script>
+	<script src="js/lessons.js" defer></script>
+</head>
+
+<body class="page-lessons">
+	<header class="site-header">
+		<a class="header-logo" href="index.html" aria-label="NAGI YOGA トップページ">
+			<img src="images/logo.png" alt="NAGI YOGA" width="500" height="168">
+		</a>
+		<button class="toggle-btn" type="button" aria-label="メニュー" aria-expanded="false" aria-controls="header-menu"
+			hidden>
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+		<nav class="header-nav" id="header-menu" aria-label="メインナビゲーション">
+			<ul class="global-menu">
+				<li>
+					<a href="index.html">トップページ</a>
+				</li>
+				<li>
+					<a href="beginner.html">初めての方へ</a>
+				</li>
+				<li>
+					<a href="lessons.html#our-lesson" aria-current="page">レッスンの種類</a>
+				</li>
+				<li>
+					<a href="index.html#instructor">インストラクター</a>
+				</li>
+				<li>
+					<a href="lessons.html#triallesson">体験レッスン</a>
+				</li>
+			</ul>
+			<a class="reservation-button header-reservation" href="lessons.html#contact">体験レッスン予約</a>
+		</nav>
+		<div class="menu-overlay" aria-hidden="true" hidden></div>
+	</header>
+	<main>
+		<div class="lesson-hero">
+			<h1>レッスン種類・予約について</h1>
+		</div>
+		<section class="lesson-features" id="our-lesson" aria-labelledby="our-lesson-title">
+			<div class="lesson-container">
+				<h2 class="section-title" id="our-lesson-title">
+					<span class="en">OUR LESSON</span>
+					<span class="ja">各レッスンの特徴</span>
+				</h2>
+				<div class="lesson-program-cards">
+					<article class="lesson-program-card">
+						<picture class="lesson-photo">
+							<img src="images/lesson-flow.webp" alt="明るい木目調のスタジオでフローヨガのポーズをとる女性" width="1466"
+								height="800">
+						</picture>
+						<div class="lesson-program-card-content">
+							<div class="lesson-program-card-heading">
+								<h3>フローヨガ</h3>
+								<p class="lesson-duration">所要時間 70分</p>
+							</div>
+							<p>フローヨガとは、呼吸と動作を連動させ、ポーズを流れるように連続して行うスタイルです。集中力を高めて脂肪燃焼、血行促進、リフレッシュに効果があります。</p>
+							<div class="lesson-recommend">
+								<h4>
+									<picture>
+										<source media="(max-width: 767px)" srcset="images/lesson-check-sp.svg"><img
+											src="images/lesson-check-pc.svg" alt="" width="16" height="16">
+									</picture>こんな方にお勧め
+								</h4>
+								<ul role="list">
+									<li>日々お疲れの方</li>
+									<li>むくみや冷え性で悩んでいる方</li>
+									<li>あまり体力に自信がないけれどヨガをしたい方</li>
+								</ul>
+							</div>
+							<p class="lesson-schedule">
+								<span>開催日時</span>
+								<strong>毎週日曜 14:00〜</strong>
+							</p>
+						</div>
+					</article>
+					<article class="lesson-program-card lesson-program-card--aerial">
+						<picture class="lesson-photo">
+							<img src="images/lesson-aerial.webp" alt="ハンモックに身体を預けてエアリアルヨガを行う女性" width="1466"
+								height="800">
+						</picture>
+						<div class="lesson-program-card-content">
+							<div class="lesson-program-card-heading">
+								<h3>エアリアルヨガ</h3>
+								<p class="lesson-duration">所要時間 60分</p>
+							</div>
+							<p>エアリアルヨガは、天井から吊るしたシルク（ハンモック）を使って空中で行うヨガです。ハンモックが体を支えて補助してくれるため、無理なくポーズや深いストレッチができます。</p>
+							<div class="lesson-recommend">
+								<h4>
+									<picture>
+										<source media="(max-width: 767px)" srcset="images/lesson-check-sp.svg"><img
+											src="images/lesson-check-pc.svg" alt="" width="16" height="16">
+									</picture>こんな方にお勧め
+								</h4>
+								<ul role="list">
+									<li>ハンモックを使ったポーズを体験したい方</li>
+									<li>体が硬い人</li>
+									<li>心と身体を癒したい方</li>
+								</ul>
+							</div>
+							<p class="lesson-schedule">
+								<span>開催日時</span>
+								<strong>毎週土曜 10:00〜</strong>
+							</p>
+						</div>
+					</article>
+				</div>
+			</div>
+		</section>
+		<section class="lesson-trial" id="triallesson" aria-labelledby="triallesson-title">
+			<div class="lesson-container">
+				<h2 class="section-title" id="triallesson-title">
+					<span class="en">TRIAL LESSON</span>
+					<span class="ja">体験レッスンの詳細</span>
+				</h2>
+				<div class="lesson-trial-card">
+					<ul class="lesson-trial-list" role="list">
+						<li>体験料金：1回1,500円（税込）<br>お支払いは現金のみです。</li>
+						<li>持ち物：水と動きやすい服装（袖のあるTシャツ・長ズボン）<br>※ヨガマットはスタジオ備え付け（無料）のため、持参不要です。</li>
+						<li>場所：愛知県犬山市・犬山口駅周辺（架空の所在地）<br>名鉄犬山口駅から徒歩5分／専用駐車場4台</li>
+					</ul>
+					<p class="lesson-trial-note">フローヨガとエアリアルヨガ、各1回ずつ上記の料金でお試しいただけます。</p>
+				</div>
+			</div>
+		</section>
+		<section class="lesson-flow" aria-labelledby="lesson-flow-title">
+			<div class="lesson-container">
+				<h2 class="section-title" id="lesson-flow-title">
+					<span class="en">RESERVATION FLOW</span>
+					<span class="ja">体験レッスン予約の流れ</span>
+				</h2>
+				<ol class="lesson-steps" role="list">
+					<li class="lesson-step">
+						<span class="lesson-step-number" aria-hidden="true">1</span>
+						<h3><span>STEP 1.</span>レッスンを選ぶ</h3>
+						<p class="lesson-step-description">フローヨガ・エアリアルヨガのどちらかのレッスンをお選びください。</p>
+						<p class="lesson-step-comment">両方1回ずつ体験可</p>
+					</li>
+					<li class="lesson-step">
+						<span class="lesson-step-number" aria-hidden="true">2</span>
+						<h3><span>STEP 2.</span>フォームから申込</h3>
+						<p class="lesson-step-description">フォームからお申し込み後、空き状況を確認し、24時間以内にメールでご連絡します。</p>
+						<p class="lesson-step-comment">簡単 3分で入力</p>
+					</li>
+					<li class="lesson-step">
+						<span class="lesson-step-number" aria-hidden="true">3</span>
+						<h3><span>STEP 3.</span>メールを受け取る</h3>
+						<p class="lesson-step-description">予約確定メールの受信で予約完了です。</p>
+						<p class="lesson-step-comment">予約完了</p>
+					</li>
+					<li class="lesson-step">
+						<span class="lesson-step-number" aria-hidden="true">4</span>
+						<h3><span>STEP 4.</span>予約日に体験</h3>
+						<p class="lesson-step-description">動きやすい服装と飲み物をお持ちの上、ご来店ください。</p>
+						<p class="lesson-step-comment">スタジオでお待ちしています</p>
+					</li>
+				</ol>
+				<div class="lesson-cancel">
+					<h3>変更・キャンセルについて</h3>
+					<p>日程変更・キャンセルは、レッスン前日までに予約確定メールへご返信ください。</p>
+				</div>
+			</div>
+		</section>
+		<section class="lesson-reservation" id="contact" aria-labelledby="contact-title">
+			<div class="lesson-form-container">
+				<h2 class="section-title" id="contact-title">
+					<span class="en">RESERVATION FORM</span>
+					<span class="ja">体験レッスン予約フォーム</span>
+				</h2>
+				<p class="lesson-form-intro">下記項目をご入力のうえ、「体験レッスンを申し込む」ボタンを押してください。</p>
+				<p class="lesson-demo-note" id="lesson-demo-note">
+					このサイトは架空のヨガスタジオの制作例です。実際の予約・送信はできません。個人情報は入力せず、サンプル情報でお試しください。</p>
+				<!-- JSの準備前は送信を無効化。個人情報の入力欄にname属性を付けず、URLにも載せない。 -->
+				<form class="lesson-form" id="lesson-form" novalidate autocomplete="off"
+					aria-describedby="lesson-demo-note">
+					<div class="lesson-fields">
+						<div class="lesson-field">
+							<label class="lesson-field-label" for="guest-name">お名前
+								<span class="lesson-badge">必須</span></label>
+							<div class="lesson-control">
+								<input id="guest-name" type="text" required placeholder="例：山田 紬"
+									aria-describedby="guest-name-error">
+								<p class="lesson-error" id="guest-name-error" aria-live="polite"></p>
+							</div>
+						</div>
+						<div class="lesson-field">
+							<label class="lesson-field-label" for="guest-email">メールアドレス <span
+									class="lesson-badge">必須</span></label>
+							<div class="lesson-control">
+								<input id="guest-email" type="email" required placeholder="example@example.com"
+									aria-describedby="guest-email-error">
+								<p class="lesson-error" id="guest-email-error" aria-live="polite"></p>
+							</div>
+						</div>
+						<div class="lesson-field">
+							<label class="lesson-field-label" for="guest-phone">電話番号 <span
+									class="lesson-badge">必須</span></label>
+							<div class="lesson-control">
+								<input id="guest-phone" type="tel" required placeholder="090-1234-5678"
+									aria-describedby="guest-phone-error">
+								<p class="lesson-error" id="guest-phone-error" aria-live="polite"></p>
+							</div>
+						</div>
+						<div class="lesson-field">
+							<span class="lesson-field-label" id="lesson-type-label">レッスン種類 <span
+									class="lesson-badge">必須</span></span>
+							<div class="lesson-control">
+								<div class="lesson-choices" role="radiogroup" aria-labelledby="lesson-type-label"
+									aria-required="true" aria-describedby="lesson-type-error">
+									<label class="lesson-choice">
+										<input id="lesson-flow" type="radio" name="lesson-type" value="flow" required
+											checked>
+										<span>フローヨガ <small>（日曜日 14:00〜 / 70分）</small></span>
+									</label>
+									<label class="lesson-choice">
+										<input id="lesson-aerial" type="radio" name="lesson-type" value="aerial"
+											required>
+										<span>エアリアルヨガ <small>（土曜日 10:00〜 / 60分）</small></span>
+									</label>
+								</div>
+								<p class="lesson-error" id="lesson-type-error" aria-live="polite"></p>
+							</div>
+						</div>
+						<div class="lesson-field">
+							<label class="lesson-field-label" for="lesson-date">希望日 <span
+									class="lesson-badge">必須</span></label>
+							<div class="lesson-control">
+								<input id="lesson-date" type="date" required
+									aria-describedby="lesson-date-hint lesson-date-error">
+								<p class="lesson-date-hint" id="lesson-date-hint">翌日以降で、フローヨガは日曜、エアリアルヨガは土曜をお選びください。</p>
+								<p class="lesson-error" id="lesson-date-error" aria-live="polite"></p>
+							</div>
+						</div>
+						<div class="lesson-field">
+							<label class="lesson-field-label" for="lesson-notes">備考 <span
+									class="lesson-badge lesson-badge--optional">任意</span></label>
+							<div class="lesson-control">
+								<textarea id="lesson-notes" rows="3" placeholder="体験レッスンについてのご質問などをご記入ください"></textarea>
+							</div>
+						</div>
+					</div>
+					<div class="lesson-agreement">
+						<div class="lesson-agreement-line">
+							<input id="lesson-consent" type="checkbox" required aria-label="プライバシーポリシーに同意して申し込む"
+								aria-describedby="lesson-consent-error">
+							<span>
+								<button class="lesson-policy-link" type="button" id="lesson-policy-open"
+									disabled>プライバシーポリシー</button>
+								<label for="lesson-consent">に同意して申し込む</label>
+							</span>
+						</div>
+						<p class="lesson-error" id="lesson-consent-error" aria-live="polite"></p>
+					</div>
+					<button class="lesson-submit" id="lesson-submit" type="submit" disabled>体験レッスンを申し込む</button>
+					<noscript>
+						<p>フォームのデモとプライバシーポリシーの表示にはJavaScriptを有効にしてください。入力内容は送信されません。</p>
+					</noscript>
+				</form>
+			</div>
+			<img class="lesson-wave" src="images/lesson-footer-wave.svg" width="1440" height="120" alt="">
+		</section>
+	</main>
+	<!-- モーダル -->
+	<dialog class="lesson-dialog" id="lesson-policy-dialog" aria-labelledby="lesson-policy-title">
+		<h2 id="lesson-policy-title" tabindex="-1">プライバシーポリシー</h2>
+		<h3>このサイトについて</h3>
+		<p>このサイトは、架空のヨガスタジオ「NAGI YOGA」を題材にした自主制作のデモサイトです。実際の予約受付やメール送信は行っていません。</p>
+		<h3>フォームの入力内容について</h3>
+		<p>体験予約フォームは、入力と画面の動作をお試しいただくためのものです。氏名・メールアドレス・電話番号などの実際の個人情報は入力せず、サンプル情報をご使用ください。</p>
+		<p>フォームの入力内容は、このページ上で入力チェックとデモの完了表示にのみ使用します。入力内容を外部へ送信したり、サーバーやブラウザの保存領域（Cookie・ローカルストレージなど）に保存したりする処理は行いません。
+		</p>
+		<h3>デモの完了表示について</h3>
+		<p>入力チェック後に表示される完了画面は、操作体験のためのものです。予約は成立せず、確認メールも送信されません。</p>
+		<h3>外部サービスについて</h3>
+		<p>このサイトはGitHub Pagesでの公開と、Google
+			Fontsによるフォントの読み込みを予定しています。サイトの閲覧時には、ページやフォントの配信に必要な通信が発生します。フォームの入力内容をこれらのサービスへ送信する処理は行いません。</p>
+		<button class="lesson-submit" type="button" data-dialog-close>閉じる</button>
+	</dialog>
+	<dialog class="lesson-dialog" id="lesson-complete-dialog" aria-labelledby="lesson-complete-title"
+		aria-describedby="lesson-complete-description">
+		<h2 id="lesson-complete-title" tabindex="-1">デモのお申し込みが完了しました。</h2>
+		<p id="lesson-complete-description">入力内容は送信されていません。実際の予約は受け付けておりません。</p>
+		<button class="lesson-submit" type="button" data-dialog-close>閉じる</button>
+	</dialog>
+	<footer class="site-footer">
+		<div class="footer-content">
+			<div class="footer-information">
+				<a href="index.html" aria-label="NAGI YOGA トップページ" class="footer-logo">
+					<img src="images/logo.png" width="200" height="67" alt="NAGI YOGA">
+				</a>
+				<p class="footer-description">
+					身体をほどいて、心を軽くする。<br>愛知県犬山市にあるマインドフルネス・ヨガスタジオ。</p>
+				<p>
+					場所：愛知県犬山市（架空の所在地）<br>
+					アクセス：名鉄犬山口駅から徒歩5分／専用駐車場4台
+				</p>
+			</div>
+			<ul class="footer-nav">
+				<li>
+					<a href="index.html">TOP</a>
+				</li>
+				<li>
+					<a href="beginner.html">初めての方へ</a>
+				</li>
+				<li>
+					<a href="lessons.html#our-lesson" aria-current="page">レッスンの種類</a>
+				</li>
+				<li>
+					<a href="index.html#instructor">インストラクター</a>
+				</li>
+				<li>
+					<a href="lessons.html#triallesson">体験レッスン</a>
+				</li>
+			</ul>
+			<a class="reservation-button footer-reservation" href="lessons.html#contact">体験レッスン予約</a>
+		</div>
+		<p class="copyright">
+			<small>© NAGI YOGA All Rights Reserved.</small>
+		</p>
+	</footer>
+</body>
+
+</html>

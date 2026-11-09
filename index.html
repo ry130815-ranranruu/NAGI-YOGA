@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" type="image/png" href="images/favicon.png" sizes="512x512">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NAGI YOGA｜少人数ヨガスタジオ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&family=Zen+Kaku+Gothic+New:wght@400;500&family=Zen+Old+Mincho:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+  <noscript>
+    <style>
+      .hero[data-hero-state="preparing"] .hero-photo,
+      .hero[data-hero-state="preparing"] .hero-wave-text text {
+        opacity: 1;
+      }
+      .hero[data-hero-state] .hero-scroll {
+        opacity: 1;
+        transition: none;
+      }
+      .hero[data-hero-state] .hero-scroll-mouse::before {
+        animation: none;
+      }
+    </style>
+  </noscript>
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="header-logo" href="index.html" aria-label="NAGI YOGA トップページ">
+      <img src="images/logo.png" alt="NAGI YOGA" width="500" height="168">
+    </a>
+    <button class="toggle-btn" type="button" aria-label="メニュー" aria-expanded="false" aria-controls="header-menu" hidden>
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="header-nav" id="header-menu" aria-label="メインナビゲーション">
+      <ul class="global-menu">
+        <li><a href="index.html" aria-current="page">トップページ</a></li>
+        <li><a href="beginner.html">初めての方へ</a></li>
+        <li><a href="lessons.html#our-lesson">レッスンの種類</a></li>
+        <li><a href="index.html#instructor">インストラクター</a></li>
+        <li><a href="lessons.html#triallesson">体験レッスン</a></li>
+      </ul>
+      <a class="reservation-button header-reservation" href="lessons.html#contact">体験レッスン予約</a>
+    </nav>
+    <div class="menu-overlay" aria-hidden="true" hidden></div>
+  </header>
+
+  <main>
+    <div class="hero" data-hero-state="preparing">
+      <img class="hero-photo" src="images/hero.webp" alt="光が差し込むヨガスタジオ">
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="hero-intro">NAGI yoga<br>少人数ヨガスタジオ</p>
+        <a class="hero-reservation" href="lessons.html#contact">
+          体験レッスンを予約する<img src="images/reservation-arrow.svg" alt="">
+        </a>
+      </div>
+      <div class="hero-scroll" aria-hidden="true">
+        <span class="hero-scroll-mouse"></span>
+        <span class="hero-scroll-label">scroll</span>
+      </div>
+      <div class="hero-wave">
+        <img class="hero-wave-shape" src="images/hero-wave.svg" alt="" width="1440" height="120">
+        <h1 class="hero-title" id="hero-title">
+          <span class="visually-hidden">身体をほどいて、心を軽くする。</span>
+          <!-- 見出しの読み上げは上の全文に一本化し、SVGは視覚表現を担う。 -->
+          <svg class="hero-wave-text hero-wave-text--pc" viewBox="0 0 1440 152" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true" focusable="false">
+            <defs>
+              <path id="hero-wave-text-path"
+                d="M 0 0 C 67.159805 27.256325 238.459183 85.882507 386.378235 102.336632 C 571.277039 122.904287 722.009766 75.247520 841.591064 37.623760 C 961.172363 0 1361.116539 -20.066010 1440 75.247520" />
+            </defs>
+            <!-- startOffsetを変えると、曲線に沿って文字が移動する。
+               translateはFigmaとブラウザーのフォント基準位置の差を補正。 -->
+            <text dominant-baseline="central" transform="translate(0 -3)">
+              <textPath href="#hero-wave-text-path" startOffset="181.690322">身体をほどいて、 心を軽くする。</textPath>
+            </text>
+          </svg>
+          <!-- 承認されたスマホ用の浅い曲線。文字は画像化せずSVGテキストで表示。 -->
+          <svg class="hero-wave-text hero-wave-text--sp" viewBox="0 0 390 110" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true" focusable="false">
+            <defs>
+              <path id="hero-wave-text-path-sp"
+                d="M0 42 C65 54 110 74 176 70 C245 66 287 40 350 45 C370 47 382 51 390 56" />
+            </defs>
+            <path d="M0 42 C65 54 110 74 176 70 C245 66 287 40 350 45 C370 47 382 51 390 56 L390 110 H0Z"
+              fill="#eefcfe" />
+            <text dy="-11">
+              <textPath href="#hero-wave-text-path-sp" startOffset="24">身体をほどいて、心を軽くする。</textPath>
+            </text>
+          </svg>
+        </h1>
+      </div>
+    </div>
+
+    <section class="concept page-section" aria-labelledby="concept-title">
+      <div class="section-container">
+        <h2 class="section-title" id="concept-title">
+          <span class="en">CONCEPT</span>
+          <span class="ja">NAGIのコンセプト</span>
+        </h2>
+        <div class="concept-content">
+          <img class="concept-photo" data-reveal src="images/concept.webp" width="600" height="450"
+            alt="庭を望む落ち着いた空間でヨガを行う様子">
+          <div class="concept-text" data-reveal>
+            <h3>日常から離れて、<br>心と身体に向き合う</h3>
+            <p>
+              ヨガは「頑張って身体を鍛えるもの」でも、「周りと柔軟性を競うもの」でもありません。
+            </p>
+            <p>
+              日常の役割やスマートフォンの通知から少し離れ、ただ自分の呼吸に耳を澄ませます。緊張していた肩の力を、ゆるめてリラックス状態でヨガを行います。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features page-section" aria-labelledby="features-title">
+      <div class="section-container">
+        <h2 class="section-title" id="features-title">
+          <span class="en">FEATURES</span>
+          <span class="ja">NAGIの3つの特徴</span>
+        </h2>
+        <ul class="feature-grid">
+          <li class="card feature-card" data-reveal>
+            <img class="feature-number" src="images/number-01.svg" width="33" alt="01">
+            <img class="feature-photo" src="images/feature-01.png" alt="少人数でヨガを楽しむレッスンの様子">
+            <h3>少人数制だから安心</h3>
+            <p>大人数の大型スタジオとは異なり、定員最大7名までの落ち着いた空間。インストラクターが一人ひとりの柔軟性やその日の体調を見守り、寄り添ってサポートします。</p>
+          </li>
+          <li class="card feature-card" data-reveal>
+            <img class="feature-number" src="images/number-02.svg" width="33" alt="02">
+            <img class="feature-photo" src="images/feature-02.png" alt="自分のペースで身体を伸ばすヨガの様子">
+            <h3>マイペースに楽しめる</h3>
+            <p>「身体が硬い」「運動習慣がない」という方にこそ通っていただきたいスタジオです。難しいポーズを強いることは一切なく、気持ちよく伸びる範囲を大切にします。</p>
+          </li>
+          <li class="card feature-card" data-reveal>
+            <img class="feature-number" src="images/number-03.svg" width="33" alt="03">
+            <img class="feature-photo" src="images/feature-03.png" alt="布を使うエアリアルヨガの様子">
+            <h3>エアリアルヨガも体験</h3>
+            <p>布に体をあずけて行うエアリアルヨガ。重力を利用して背骨の歪みを整え、無理なく体幹と柔軟性を強化。逆さのポーズが血行を促し、心身を深くリラックスさせます。</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="lessons page-section" aria-labelledby="lessons-title">
+      <div class="section-container">
+        <h2 class="section-title" id="lessons-title">
+          <span class="en">LESSON</span>
+          <span class="ja">レッスンについて</span>
+        </h2>
+        <ul class="lesson-grid">
+          <li class="card lesson-card" data-reveal>
+            <img class="lesson-icon" src="images/beginner-icon.svg" width="48" height="48" alt="">
+            <h3>初めての方へ</h3>
+            <p>当日の持ち物、服装など、不安なくお越しいただける情報をご案内いたします。</p>
+            <a class="detail-button" href="beginner.html">詳しく見る</a>
+          </li>
+          <li class="card lesson-card" data-reveal>
+            <img class="lesson-icon" src="images/lesson-icon.svg" width="48" height="48" alt="">
+            <h3>レッスンの種類</h3>
+            <p>フローヨガとエアリアルヨガ、気分や体調に合わせて選べる２種類のクラスをご用意しています。</p>
+            <a class="detail-button" href="lessons.html#our-lesson">詳しく見る</a>
+          </li>
+          <li class="card lesson-card" data-reveal>
+            <img class="lesson-icon" src="images/instructor-icon.svg" width="48" height="48" alt="">
+            <h3>インストラクター</h3>
+            <p>一人ひとりに寄り添う講師を紹介します。心地よい空間づくりと安心のサポートを常に心がけています。</p>
+            <a class="detail-button" href="index.html#instructor">詳しく見る</a>
+          </li>
+          <li class="card lesson-card" data-reveal>
+            <img class="lesson-icon" src="images/trial-icon.svg" width="48" height="48" alt="">
+            <h3>体験レッスン</h3>
+            <p>体験の流れや料金、お得な初回価格でのWeb24時間予約の手順をご確認いただけます。</p>
+            <a class="detail-button" href="lessons.html#triallesson">
+              詳しく見る
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="instructor" class="instructor" aria-labelledby="instructor-title">
+      <div class="section-container">
+        <h2 class="section-title" id="instructor-title">
+          <span class="en">INSTRUCTOR</span>
+          <span class="ja">インストラクターについて</span>
+        </h2>
+        <div class="instructor-content">
+          <img class="instructor-photo" data-reveal src="images/instructor.webp" width="384" height="480"
+            alt="インストラクター 水野なぎ">
+          <div class="instructor-text" data-reveal>
+            <h3>水野　なぎ</h3>
+            <dl class="instructor-profile">
+              <dt>ヨガ歴：</dt>
+              <dd>8年</dd>
+              <dt>インストラクター歴：</dt>
+              <dd>5年</dd>
+              <dt>大切にしていること：</dt>
+              <dd>「ポーズの完成度より、自分の身体の感覚を大切にする」</dd>
+              <dt>初心者へのメッセージ：</dt>
+              <dd>「身体が硬くても、運動が苦手でも大丈夫です。一緒に<span class="instructor-message-continuation">無理のないところから始めましょう。」</span></dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+      <div class="footer-wave" aria-hidden="true"><img src="images/footer-wave.svg" class="footer-wave-shape"
+          width="1440" height="152" alt="">
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-information">
+        <a href="index.html" aria-label="NAGI YOGA トップページ" class="footer-logo">
+          <img src="images/logo.png" width="200" height="67" alt="NAGI YOGA">
+        </a>
+        <p class="footer-description">
+          身体をほどいて、心を軽くする。<br>愛知県犬山市にあるマインドフルネス・ヨガスタジオ。
+        </p>
+        <p>
+          場所：愛知県犬山市（架空の所在地）<br>
+          アクセス：名鉄犬山口駅から徒歩5分／専用駐車場4台
+        </p>
+      </div>
+      <ul class="footer-nav">
+        <li><a href="index.html" aria-current="page">TOP</a></li>
+        <li><a href="beginner.html">初めての方へ</a></li>
+        <li><a href="lessons.html#our-lesson">レッスンの種類</a></li>
+        <li><a href="index.html#instructor">インストラクター</a></li>
+        <li><a href="lessons.html#triallesson">体験レッスン</a></li>
+      </ul>
+      <a class="reservation-button footer-reservation" href="lessons.html#contact">体験レッスン予約</a>
+    </div>
+    <p class="copyright">
+      <small>© NAGI YOGA All Rights Reserved.</small>
+    </p>
+  </footer>
+</body>
+
+</html>
